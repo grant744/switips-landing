@@ -1,0 +1,15 @@
+#_BASIS .identification_screen .centering .identification_place .inscription_login {
+	padding: 0; margin: 0 0 10px 2px;
+
+	font-family: regular_text; font-size: 22px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+#_BASIS .identification_screen .centering .identification_place .inscription_password {
+	padding: 0; margin: 30px 0 10px 2px;
+
+	font-family: regular_text; font-size: 22px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+#_BASIS .identification_screen .centering .identification_place .indent {
+	padding: 0; margin: 30px 0 0 0;
+}

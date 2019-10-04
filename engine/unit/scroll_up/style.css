@@ -1,0 +1,12 @@
+#toTop {
+	position: fixed; bottom: -50px; right: 25px; 
+
+	width: 35px; height: 35px;
+
+	transition: 0.2s linear; border-radius: 50%; border: 1px solid rgba(0,0,0,.7);
+	background-color: #fff; background-image: url(/engine/unit/scroll_up/image.png); background-position: center center; background-size: cover; 
+}
+
+#toTop:hover {
+	cursor: pointer; opacity: 0.5;
+}

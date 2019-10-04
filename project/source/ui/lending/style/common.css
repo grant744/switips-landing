@@ -1,0 +1,613 @@
+@font-face {
+	font-family: light_text; 
+	src: url(/project/source/ui/lending/style/font/SanFrancisco/SFUIDisplay-Light.ttf);
+}
+
+@font-face {
+	font-family: regular_text; 
+	src: url(/project/source/ui/lending/style/font/SanFrancisco/SFUIDisplay-Regular.ttf);
+}
+
+@font-face {
+	font-family: bold_text; 
+	src: url(/project/source/ui/lending/style/font/SanFrancisco/SFUIDisplay-Bold.ttf);
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Main cover blocks _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+body, html { 
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#_BASIS {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%; min-width: 1280px;
+		height: 100%;
+}
+
+.no_display {
+	display: none;
+}
+
+a { 
+	text-decoration: none;
+} 
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .welcome_screen _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .welcome_screen {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		min-height: 600px; height: 100%; max-height: 1000px;
+
+	overflow: hidden;
+}
+
+#_BASIS .welcome_screen .background {
+	position: absolute; top: -150px; left: -150px;
+
+	width: 100%; height: 100%; padding: 150px;
+
+	background-size: cover; background-position: center center;
+}
+
+#_BASIS .welcome_screen .content {
+	position: absolute; top:  0px; left: 50%;
+
+	width: 1100px; height: 100%;
+	margin-left: -550px;
+}
+
+#_BASIS .welcome_screen .content .logo {
+	position: absolute; top: 50px; left: 0px;
+
+	width: 350px; height: 70px;
+
+	background-image: url(/project/source/ui/lending/image/logo_white.png); background-size: cover; background-position: center center;
+}
+
+#_BASIS .welcome_screen .content .text {
+	position: absolute; top:  50%; left: 0px;
+	margin-top: -145px;
+}
+
+#_BASIS .welcome_screen .content .text p.headline {
+	padding: 0; margin: 0;
+	font-family: bold_text; font-size: 50px; color: #fff; text-transform: uppercase; letter-spacing: 5px;
+}
+
+#_BASIS .welcome_screen .content .text p.addition {
+	padding: 0; margin: 25px 0 0 0;
+	font-family: regular_text; font-size: 24px; color: #fff; letter-spacing: 2px;
+}
+
+#_BASIS .welcome_screen .content .next {
+	position: absolute; bottom:  50px; left: 50%;
+	
+	width: 60px; height: 60px; margin-left: -30px;
+
+	border-radius: 50%; border: 1px solid #fff; background-image: url(/project/source/ui/lending/image/icon_down_1.png); background-size: cover; background-position: center center; transition: 0.2s linear;
+}
+
+#_BASIS .welcome_screen .content .next:hover {
+	background-image: url(/project/source/ui/lending/image/icon_down_2.png); cursor: pointer;
+}
+
+#_BASIS .welcome_screen .content .language_tool {
+	position: absolute; top: 50px; right: 0px;
+
+	overflow: hidden; border-radius: 20px; border: 1px solid #fff;
+}
+
+#_BASIS .welcome_screen .content .language_tool .language_option {
+	float: left; margin: 0; padding: 8px 19px;
+
+	border: none; outline: none; background-color: transparent; transition: 0.2s linear; 
+	font-family: regular_text; font-size: 16px; color: #fff; letter-spacing: 2px;
+}
+
+#_BASIS .welcome_screen .content .language_tool .language_option:hover {
+	background-color: rgba(255, 255, 255, .2); cursor: pointer;
+}
+
+#_BASIS .welcome_screen .content .language_tool .language_option_active {
+	float: left; margin: 0; padding: 8px 19px;
+
+	border: none; outline: none; background-color: #fff; 
+	font-family: regular_text; font-size: 16px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+#_BASIS .welcome_screen .content .language_tool .language_option_active:hover {
+	cursor: pointer;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .connected_stores _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .connected_stores {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		padding: 50px 0;
+
+	background-color: #fff;
+}
+
+#_BASIS .connected_stores p.headline {
+	padding: 0; margin: 0;
+	opacity: 0.67; font-family: regular_text; font-size: 36px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores p.addition {
+	padding: 15px 0 50px 0; margin: 0;
+	opacity: 0.5; font-family: light_text; font-size: 24px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores .stores_place {
+	position: relative;
+
+	width: 1100px; height: 220px;
+	margin: 0 auto;
+
+	overflow: hidden; transition: 0.2s linear; 
+}
+
+#_BASIS .connected_stores .stores_place .inner_element {
+	position: absolute; top: -20px;
+
+	width: 100%;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store {
+	position: relative; float: left;
+
+	width: 300px; height: 100px;
+	margin: 20px 0 0 50px;
+
+	overflow: hidden; border-radius: 15px; background-color: rgba(0, 0, 0, 0.05);
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store:hover {
+	cursor: default;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store .image {
+	position: absolute; top: -10px; left: -10px;
+
+	width: 100%; height: 100%; padding: 10px;
+
+	background-position: center center; background-size: cover; 
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store:hover .image {
+	filter: blur(10px);
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store .blackout {
+	position: absolute; top: 0px; left: 0px;
+
+	width: 100%; height: 100%;
+
+	transition: 0.2s linear; 
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store:hover .blackout {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store .cashback_percentage {
+	position: absolute; bottom: -50px; left: 0px;
+
+	width: 100%;
+
+	transition: 0.2s linear; 
+	font-family: bold_text; font-size: 48px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .store:hover .cashback_percentage {
+	bottom: 20px; transform: rotate(360deg);
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .show_all {
+	position: relative; float: left;
+
+	width: 298px; height: 98px;
+	margin: 20px 0 0 50px;
+
+	overflow: hidden; border-radius: 15px; border: 1px solid rgba(0, 0, 0, 0.5); transition: 0.2s linear; 
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .show_all:hover {
+	cursor: pointer; border: 1px solid #ff74bb;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .show_all .sign {
+	position: absolute; top: 38px; left: 0px;
+
+	width: 100%;
+
+	transition: 0.2s linear;
+	font-family: light_text; font-size: 18px; color: rgba(0, 0, 0, 0.67); text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .show_all:hover .sign {
+	color: #ff74bb;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .hide {
+	position: relative; float: left;
+
+	width: 298px; height: 98px;
+	margin: 20px 0 0 50px;
+
+	overflow: hidden; border-radius: 15px; border: 1px solid rgba(0, 0, 0, 0.5); transition: 0.2s linear; 
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .hide:hover {
+	cursor: pointer; border: 1px solid #ff74bb;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .hide .sign {
+	position: absolute; top: 38px; left: 0px;
+
+	width: 100%;
+
+	transition: 0.2s linear;
+	font-family: light_text; font-size: 18px; color: rgba(0, 0, 0, 0.67); text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores .stores_place .inner_element .hide:hover .sign {
+	color: #ff74bb;
+}
+
+#_BASIS .connected_stores .button {
+	width: 300px; padding: 14px 0; margin: 50px auto 0;
+
+	border-radius: 50px; border: 1px solid rgba(0, 0, 0, 0.5); transition: 0.2s linear; 
+	font-family: light_text; font-size: 18px; color: rgba(0, 0, 0, 0.67); text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+#_BASIS .connected_stores .button:hover {
+	cursor: pointer; border: 1px solid #ff74bb; color: #ff74bb; 
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .how_it_works _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .how_it_works {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%; padding: 50px 0;
+
+	background-color: #fff; background-image: url(/project/source/ui/lending/image/stock/how_it_works.jpg); background-position: center center; background-size: cover; 
+}
+
+#_BASIS .how_it_works p.headline {
+	padding: 0; margin: 0;
+
+	font-family: bold_text; font-size: 45px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .how_it_works p.addition {
+	padding: 15px 0 50px 0; margin: 0;
+
+	font-family: regular_text; font-size: 30px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .how_it_works .stages_place {
+	position: relative; top:  0px; left: 50%;
+
+	width: 1100px;
+	margin: 0 0 50px -550px;
+
+	overflow: hidden;
+}
+
+#_BASIS .how_it_works .stages_place .stage {
+	float: left;
+
+	width: 180px;
+	margin-left: 140px;
+
+	transition: 0.2s linear; 
+}
+
+#_BASIS .how_it_works .stages_place .stage:hover {
+	opacity: 0.5;
+}
+
+#_BASIS .how_it_works .stages_place .stage .image {
+	width: 120px; height: 120px;
+	margin: 0 auto;
+
+	border-radius: 50%; background-size: cover; background-position: center center;
+}
+
+#_BASIS .how_it_works .stages_place .stage p.title {
+	padding: 25px 0 0 0; margin: 0;
+
+	font-family: bold_text; font-size: 18px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .how_it_works .stages_place .stage p.comment {
+	padding: 10px 0 0 0; margin: 0;
+
+	font-family: light_text; font-size: 14px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .how_it_works .button_place {
+	position: relative;
+	width: 100%;
+}
+
+#_BASIS .how_it_works .button_place .button {
+	width: 300px; padding: 14px 0; margin: 0 auto;
+
+	border-radius: 50px; border: 1px solid #fff; transition: 0.2s linear; 
+	font-family: light_text; font-size: 18px; color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+#_BASIS .how_it_works .button_place .button:hover {
+	background-color: rgba(255, 255, 255, .2); cursor: pointer;
+}
+
+#_BASIS .how_it_works .button_place .arrow {
+	position: absolute; top: -33px; left: 50%;
+
+	width: 70px; height: 70px;
+	margin-left: -249px;
+
+	opacity: 0.5;
+	background-image: url(/project/source/ui/lending/image/arrow.png); background-position: center center; background-size: cover; 
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .about_company _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .about_company {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		padding: 50px 0;
+
+	background-color: #fff;
+}
+
+#_BASIS .about_company p.headline {
+	padding: 0; margin: 0;
+	opacity: 0.67; font-family: regular_text; font-size: 36px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .about_company p.addition {
+	padding: 15px 0 50px 0; margin: 0;
+	opacity: 0.5; font-family: light_text; font-size: 24px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .about_company .about_place {
+	position: relative; top:  0px; left: 50%;
+
+	width: 1100px;
+	margin: 0 0 0 -550px;
+
+	overflow: hidden;
+}
+
+#_BASIS .about_company .about_place .side_1 {
+	float: left;
+
+	width: 500px;
+}
+
+#_BASIS .about_company .about_place .side_1 .laptop {
+	position: relative;
+
+	width: 500px; height: 300px;
+
+	background-image: url(/project/source/ui/lending/image/macbook.png); background-position: center center; background-size: cover; 
+}
+
+#_BASIS .about_company .about_place .side_1 .laptop .video_place {
+	position: absolute; top: 10px; left: 52px;
+
+	width: 395px; height: 250px;
+
+	overflow: hidden; border-radius: 4px; background-color: #000;
+}
+
+#_BASIS .about_company .about_place .side_1 .laptop .video_place .video {
+	position: absolute; top: -2px; left: -4px;
+
+	width: 403px; height: 254px;
+}
+
+#_BASIS .about_company .about_place .side_2 {
+	float: left;
+
+	width: 500px;
+	padding: 0 0 0 50px;
+}
+
+#_BASIS .about_company .about_place .side_2 p.story {
+	padding: 0 0 50px 0; margin: 0;
+
+	opacity: 0.5; font-family: light_text; font-size: 18px; color: #000; line-height: 1.5; letter-spacing: 2px;
+}
+
+#_BASIS .about_company .about_place .side_2 .button {
+	width: 300px; padding: 14px 0;
+
+	border-radius: 50px; border: 1px solid rgba(0, 0, 0, 0.5); transition: 0.2s linear; 
+	font-family: light_text; font-size: 18px; color: rgba(0, 0, 0, 0.67); text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+#_BASIS .about_company .about_place .side_2 .button:hover {
+	cursor: pointer; border: 1px solid #ff74bb; color: #ff74bb; 
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .reviews _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .reviews {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		padding: 50px 0;
+
+	background-color: #fff; background-image: url(/project/source/ui/lending/image/stock/reviews.jpg); background-position: center center; background-size: cover; 
+}
+
+#_BASIS .reviews p.headline {
+	padding: 0; margin: 0;
+
+	font-family: bold_text; font-size: 45px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .reviews p.addition {
+	padding: 15px 0 50px 0; margin: 0;
+
+	font-family: regular_text; font-size: 30px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .reviews .slider {
+	position: relative; top:  0px; left: 50%;
+
+	width: 1100px;
+	margin: 0 0 0 -550px;
+}
+
+#_BASIS .reviews .switips_slide {
+	position: relative;
+
+	width: 350px;
+	margin: 0 15px;
+
+	overflow: hidden; 
+}
+
+#_BASIS .reviews .switips_slide .profile {
+	width: 100px; height: 100px;
+	margin: 0 auto 15px;
+
+	background-color: #fff; border-radius: 50%; background-position: center center; background-size: cover; 
+}
+
+#_BASIS .reviews .switips_slide .name_profile {
+	padding: 0; margin: 0 0 15px 0;
+	font-family: bold_text; font-size: 16px; color: #fff; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .reviews .switips_slide .text_profile {
+	padding: 0 20px; margin: 0; 
+
+	font-family: light_text; font-size: 14px; color: #fff; letter-spacing: 2px;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .join_the_community _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .join_the_community {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		padding: 50px 0;
+
+	background-color: #fff;
+}
+
+#_BASIS .join_the_community p.headline {
+	padding: 0; margin: 0;
+	opacity: 0.67; font-family: regular_text; font-size: 36px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .join_the_community p.addition {
+	padding: 15px 0 50px 0; margin: 0;
+	opacity: 0.5; font-family: light_text; font-size: 24px; color: #000; text-align: center; letter-spacing: 2px;
+}
+
+#_BASIS .join_the_community .social_networks_place {
+	width: 750px;
+	margin: 0 auto;
+
+	overflow: hidden;
+}
+
+#_BASIS .join_the_community .social_networks_button {
+	float: left;
+
+	width: 360px; height: 70px;
+	margin: 0 0 0 25px; 
+
+	border-radius: 15px; transition: 0.2s linear; 
+	opacity: 0.95;  background-position: center center; background-size: cover; 
+}
+
+#_BASIS .join_the_community .social_networks_button:hover {
+	cursor: pointer; opacity: 0.5;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .footer _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .footer {
+	position: relative;
+
+		/* for screens 16:9 */
+		width: 100%;
+		padding: 50px 0;
+
+	background-color: #fff; border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#_BASIS .footer .level_1 {
+	width: 1100px; margin: 0 auto;
+
+	overflow: hidden;
+}
+
+#_BASIS .footer .level_1 .logo {
+	float: left;
+
+	width: 250px;height: 50px;
+
+	background-image: url(/project/source/ui/lending/image/logo.png); background-position: center center; background-size: cover; 
+}
+
+#_BASIS .footer .level_1 .company_name {
+	float: right;
+
+	margin: 16px 0 0 0;
+
+	opacity: 0.67; font-family: light_text; font-size: 18px; color: #000; letter-spacing: 2px;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for .looked_window _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.looked_window {
+	position: fixed; top: 50%; left: 50%;
+
+	margin: -38px 0 0 -178px;
+
+	overflow: hidden; border-radius: 30px; box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.looked_window .background {
+	position: absolute; top: 0; left: 0;
+
+	width: 100%; height: 100%;
+
+	opacity: 0.9; background-color: #fff;
+}
+
+.looked_window .text {
+	position: relative;
+
+	padding: 20px 50px;
+
+	font-family: light_text; font-size: 30px; color: rgba(0, 0, 0, 0.9); letter-spacing: 2px;
+}

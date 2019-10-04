@@ -1,0 +1,29 @@
+#_BASIS .content_place .container .content .centering .restriction .personal_area_place {
+	margin: 50px 0 0 0;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .personal_area_place .personal_area_image_background {
+	position: relative;
+
+	width: 150px; height: 150px; margin-right: 50px; 
+
+	overflow: hidden; background: linear-gradient(45deg, #757cff, #ff74bb); border-radius: 50%;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .personal_area_place .personal_area_image_background .personal_area_image {
+	position: absolute; top: 0; left: 0;
+
+	width: 100%; height: 100%;
+
+	background-image: url(/project/source/ui/panel/image/user_image.png); background-size: cover; background-position: center center;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .personal_area_place .user_name {
+	padding: 0; margin: 0;
+	font-family: regular_text; font-size: 20px; color: rgba(0, 0, 0, .67);  letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .personal_area_place .user_data {
+	padding: 0; margin: 15px 0 0 0;
+	font-family: regular_text; font-size: 14px; color: rgba(0, 0, 0, .5);  letter-spacing: 2px;
+}

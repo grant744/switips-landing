@@ -1,0 +1,365 @@
+@font-face {
+	font-family: light_text; 
+	src: url(/project/source/ui/panel/style/font/SanFrancisco/SFUIDisplay-Light.ttf);
+}
+
+@font-face {
+	font-family: regular_text; 
+	src: url(/project/source/ui/panel/style/font/SanFrancisco/SFUIDisplay-Regular.ttf);
+}
+
+@font-face {
+	font-family: bold_text; 
+	src: url(/project/source/ui/panel/style/font/SanFrancisco/SFUIDisplay-Bold.ttf);
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Main cover blocks _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+body, html { 
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#_BASIS {
+	position: relative;
+
+		/* for screens 16:9 */
+		min-width: 1280px; width: 100%;
+		height: 100%;
+}
+
+a { 
+	text-decoration: none;
+} 
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for flex _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .flex {
+	width: 100%;
+
+	display: flex;
+}
+
+#_BASIS .menu_place {
+	width: 250px;
+
+	flex: none; transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+#_BASIS .content_place {
+	flex: 1; 
+}
+
+#_BASIS .content_place .container {
+	width: 100%; min-height: 100%; 
+
+	display: flex; flex-direction: column;
+}
+
+#_BASIS .content_place .container .header {
+	position: relative;
+
+	width: 100%; height: 42px;
+
+	border-radius: 0 0 0 20px; transition: 0.2s linear;
+	background: linear-gradient(45deg, #757cff, #ff74bb);
+	/* box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37) */
+}
+
+#_BASIS .content_place .container .content {
+	flex-grow: 2; overflow: hidden;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for header _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .content_place .container .header .exit_place {
+	float: right;
+
+	height: 100%; padding: 0 12px; margin: 0 50px 0 0;
+
+	overflow: hidden; transition: 0.2s linear;
+}
+
+#_BASIS .content_place .container .header .exit_place:hover {
+	background-color: rgba(0, 0, 0, .1); cursor: pointer;
+}
+
+#_BASIS .content_place .container .header .exit_place .exit_image {
+	width: 14px; height: 14px; margin: 14px 0 0 0;
+
+	background-image: url(/project/source/ui/panel/image/exit_image.png); background-size: cover; background-position: center center;
+}
+
+#_BASIS .content_place .container .header .username_place {
+	float: right;
+
+	height: 100%; padding: 0 12px; margin: 0;
+
+	overflow: hidden; transition: 0.2s linear;
+}
+
+#_BASIS .content_place .container .header .username_place:hover {
+	background-color: rgba(0, 0, 0, .1); cursor: pointer;
+}
+
+#_BASIS .content_place .container .header .username_place .user_image {
+	float: left;
+
+	width: 22px; height: 22px; margin: 7px 0 0 0; 
+
+	border-radius: 50px; border: 3px solid #fff;
+	background-image: url(/project/source/ui/panel/image/user_image.png); background-size: cover; background-position: center center;
+}
+
+#_BASIS .content_place .container .header .username_place .username {
+	float: left;
+
+	padding: 0; margin: 9px 0 0 12px;
+
+	font-family: bold_text; font-size: 12px; color: #fff; letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .header .username_place .username .small {
+	padding: 0; margin: -1px 0 0 0;
+	font-family: regular_text; font-size: 10px; color: rgba(255, 255, 255, .8); letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .header .language_place {
+	float: right;
+
+	height: 100%; padding: 0 12px; margin: 0;
+
+	overflow: hidden; transition: 0.2s linear;
+}
+
+#_BASIS .content_place .container .header .language_place:hover {
+	background-color: rgba(0, 0, 0, .1); cursor: pointer;
+}
+
+#_BASIS .content_place .container .header .language_place .language_type {
+	padding: 0; margin: 14px 0 0 0;
+	font-family: regular_text; font-size: 12px; color: #fff; letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .header .language_place .language_type_active {
+	padding: 0; margin: 14px 0 0 0;
+	font-family: bold_text; font-size: 12px; color: #fff; letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .header .button_menu_off {
+	float: left;
+
+	height: 100%; padding: 0 12px; margin: 0 0 0 50px;
+
+	overflow: hidden; transition: 0.2s linear;
+}
+
+#_BASIS .content_place .container .header .button_menu_off:hover {
+	background-color: rgba(0, 0, 0, .1); cursor: pointer;
+}
+
+#_BASIS .content_place .container .header .button_menu_image {
+	width: 14px; height: 14px; margin: 14px 0 0 0;
+
+	background-image: url(/project/source/ui/panel/image/button_menu_image.png); background-size: cover; background-position: center center;
+}
+
+#_BASIS .content_place .container .header .button_menu_on {
+	float: left;
+
+	height: 100%; padding: 0 12px; margin: 0 0 0 50px;
+
+	overflow: hidden; transition: 0.2s linear; display: none;
+}
+
+#_BASIS .content_place .container .header .button_menu_on:hover {
+	background-color: rgba(0, 0, 0, .1); cursor: pointer;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for menu _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.sticky {
+	position: sticky; top: 0;
+
+	width: 250px; height: 100vh;
+
+	overflow: hidden; transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.sticky .container {
+	position: relative; top: 0; left: 0;
+
+	width: 270px; height: 100%;
+
+	overflow-y: auto; 
+}
+
+.sticky .container .restriction {
+	width: 250px; margin: 21px 0;
+}
+
+.sticky .container .restriction .logo {
+	width: 165px; height: 35px; margin: 0 auto;
+
+	background-image: url(/project/source/ui/panel/image/logo.png); background-size: cover; background-position: center center;
+}
+
+.sticky .container .restriction .item {
+	position: relative;
+	width: 190px; padding: 16px 0; margin: 0 auto;
+
+	overflow: hidden; transition: 0.2s linear;
+}
+
+.sticky .container .restriction .item:hover {
+	cursor: pointer; 
+}
+
+.sticky .container .restriction .item .item_image {
+	float: left;
+	width: 20px; height: 20px;
+
+	transition: 0.2s linear; 
+	background-color: rgba(0, 0, 0, .67); background-size: cover; background-position: center center;
+}
+
+.sticky .container .restriction .item:hover .item_image {
+	background-color: #ff74bb;
+}
+
+.sticky .container .restriction .item .item_name {
+	float: right;
+	width: 158px; margin: 3px 0;
+
+	transition: 0.2s linear;
+	font-family: regular_text; font-size: 12px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+.sticky .container .restriction .item:hover .item_name {
+	color: #ff74bb;
+}
+
+.sticky .container .restriction .item .border_bottom {
+	position: absolute; right: 0px; bottom: 0px;
+
+	width: 158px;
+
+	transition: 0.2s linear; border-top: 1px solid rgba(0, 0, 0, .67);
+}
+
+.sticky .container .restriction .item:hover .border_bottom {
+	width: 100%; border-top: 1px solid #ff74bb;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for content _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .content_place .container .content .centering {
+	position: relative;
+
+	width: 90%; min-height: 100%; margin: 0 auto;
+
+	/* background-color: rgba(0, 0, 0, .1) */
+}
+
+#_BASIS .content_place .container .content .centering .restriction {
+	position: relative;
+	
+	width: 100%; margin: 50px 0;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .title {
+	padding: 0; margin: 0;
+	font-family: regular_text; font-size: 26px; color: rgba(0, 0, 0, .67); text-align: left; letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .title {
+	padding: 0; margin: 0;
+	font-family: regular_text; font-size: 26px; color: rgba(0, 0, 0, .67); text-align: left; letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .function_line {
+	padding: 25px 0 0 0;
+	overflow: hidden;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .function_line p.item {
+	float: left;
+	padding: 7px 30px; margin: 0 0 0 20px;
+
+	font-family: regular_text; font-size: 14px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.5); transition: 0.2s linear; border-radius: 50px;
+}
+
+
+#_BASIS .content_place .container .content .centering .restriction .function_line p.item:hover {
+	border: 1px solid #ff74bb; color: #ff74bb; cursor: pointer; 
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for table_place _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+#_BASIS .content_place .container .content .centering .restriction .table_place {
+	margin: 50px 0 0 0;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place table {
+	/* border-spacing: 0px 20px */
+	border-collapse: collapse;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place tr.row_denomination {
+	background-color: #f6f7f7; border: 1px solid #d2d2d2;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place td.column_denomination {
+	padding: 15px 20px; margin: 0;
+
+	font-family: regular_text; font-size: 14px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place tr.row_data {
+	border: 1px solid #d2d2d2;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place td.column_data {
+	padding: 15px 20px; margin: 0;
+
+	font-family: regular_text; font-size: 14px; color: rgba(0, 0, 0, .67); letter-spacing: 2px;
+}
+
+#_BASIS .content_place .container .content .centering .restriction .table_place td.column_submit {
+	padding: 25px 0 0 0; margin: 0;
+}
+
+/* _-_-_-_-_-_-_-_-_-_-_-_-_ Blocks for notification _-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.notification {
+	position: fixed; top: 35px; left: 50%;
+
+	width: 500px;  padding: 15px 50px; margin: 0 0 0 -301px; 
+
+	overflow: hidden; border-radius: 50px; z-index: 9999; transition: 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+	background-color: #fff; border: 1px solid #ccc; box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.notification:hover {
+	cursor: pointer;
+}
+
+.notification .image {
+	float: left;
+
+	width: 25px; height: 25px;
+
+	background-color: #fff; background-size: cover;
+}
+
+.notification .message {
+	float: left;
+
+	padding: 0; margin: 2px 0 0 15px;
+
+	font-family: regular_text; font-size: 18px; color: rgba(0, 0, 0, .67); letter-spacing: 2px; 
+}
